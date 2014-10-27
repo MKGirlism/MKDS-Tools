@@ -11,33 +11,33 @@
 
 using namespace std;
 
-string get_file_contents(const char *filename) {
-  	ifstream in(filename, ios::in | ios::binary);
-  	if (in){
-    		ostringstream contents;
-    		contents << in.rdbuf();
-    		in.close();
-    		
-    		return (contents.str());
-  	}
-  	throw(errno);
+string GetFileContents(const char *filename) {
+	ifstream in(filename, ios::in | ios::binary);
+	if (in){
+		ostringstream contents;
+		contents << in.rdbuf();
+		in.close();
+		
+		return (contents.str());
+	}
+	throw(errno);
 }
 
 int main() {
-	string text = get_file_contents("staff_ghost_time.bin");
-
+	string text = GetFileContents("staff_ghost_time.bin");
+	
 	//Separating string to signs to reverse it
 	string array[160];
-    for (int a=0; a<160; a++) {
-    	array[a]=text.substr(a, 1);
-    }
-    
-    string convertedarray[40];
-    int array2[40][4];
-    long long finalarray[40];
-    for (int i=0; i<40; i++) {
-    	//Reversing value and final string
-    	convertedarray[i] = array[i*4+3] + array[i*4+2] + array [i*4+1] + array [i*4];
+    	for (int a=0; a<160; a++) {
+		array[a]=text.substr(a, 1);
+    	}
+	
+	string convertedarray[40];
+	int array2[40][4];
+	long long finalarray[40];
+	for (int i=0; i<40; i++) {
+    		//Reversing value and final string
+    		convertedarray[i] = array[i*4+3] + array[i*4+2] + array [i*4+1] + array [i*4];
 		for (int f=0; f<4; f++) {
 			//String into int
 			array2[i][f]=convertedarray[i][f];
@@ -55,27 +55,27 @@ int main() {
     	cin >> c;
     	if (c == 'y') {
 			Couting couting;
-    		couting.CourseList();
+		couting.CourseList();
     	}
-    	
+	
     	int y;
 		while (y != 41) {
 			cout << "\n*****************\nWrite a number from 1 to 40 to load your desired course \nor write 41 to save changes and finish program: ";
 			cin >> y;
-    		
-    		if (y <= 40) {
-    			cout << "\nThe current value for this track is: \n"
-    				<< finalarray[y-1] << " miliseconds, "
-    				<< finalarray[y-1]/1000 <<
-    				" seconds.\nWrite new value in miliseconds smaller than 16777216: ";
-    			cin >> finalarray[y-1];
-    			cout << "\nSuccesfully changed!\nYour new value is: "
-    				<< finalarray[y-1] << " miliseconds, " << finalarray[y-1]/1000 << " seconds.\n\n";
-    		}
-    		
-    		else if (y > 41) {
-    			cout << "\nWrong number.\n";
-    		}
+			
+			if (y <= 40) {
+				cout << "\nThe current value for this track is: \n"
+					<< finalarray[y-1] << " miliseconds, "
+					<< finalarray[y-1]/1000 <<
+					" seconds.\nWrite new value in miliseconds smaller than 16777216: ";
+				cin >> finalarray[y-1];
+				cout << "\nSuccesfully changed!\nYour new value is: "
+					<< finalarray[y-1] << " miliseconds, " << finalarray[y-1]/1000 << " seconds.\n\n";
+			}
+			
+			else if (y > 41) {
+				cout << "\nWrong number.\n";
+			}
 		}
 		
 		//Hexing file again
@@ -120,8 +120,8 @@ int main() {
 	
 	cin.get();
 	cin.get();
-	cout << "" << endl;
 	
 	// What does this do? It makes it incompileable?
+	// Since the Main Function is of type "int", it must Return an Integer.
 	return 0;
 }
