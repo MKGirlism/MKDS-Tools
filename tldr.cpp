@@ -1,7 +1,5 @@
 #include "tldr.h"
 
-using namespace std;
-
 void Couting::CourseList() {
 	cout << "1: GCN Yoshi Circuit\n"
 		"2-8 Unused Slots\n"
