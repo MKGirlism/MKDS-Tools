@@ -38,3 +38,15 @@ void Couting::CourseList() {
 		"39: SNES Choco Island\n"
 		"40: GBA Sky Garden\n"  << endl;
 }
+
+string FileIO::GetFileContents(const char *filename) {
+	ifstream in(filename, ios::in | ios::binary);
+	if (in){
+		ostringstream contents;
+		contents << in.rdbuf();
+		in.close();
+		
+		return (contents.str());
+	}
+	throw(errno);
+}
