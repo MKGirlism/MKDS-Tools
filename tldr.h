@@ -7,6 +7,8 @@
 #include <cerrno>
 #include <iostream>
 
+using namespace std;
+
 class Couting {
 public:
 	void CourseList();
