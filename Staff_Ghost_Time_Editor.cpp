@@ -1,4 +1,5 @@
 //Release 1.0. Probably a lot can be optimised, but sigh, it's my first proper tool ever :3
+// TYCO - Added courses.txt with and opening it instead of putting it in the code, still doesn't compile but my part should work
 #include <sstream>
 #include <iostream>
 #include <string>
@@ -51,6 +52,7 @@ int main(){
     char c;
     cin >> c;
      if (c=='y') {
+    //probably possible in different way, have never learnt C++ so I used C statements
     FILE * fp;	
     fp = fopen ("courses.txt", "r");
     fputs ("Courselist\n",fp);
@@ -107,5 +109,6 @@ int main(){
 		cout << "\nI hope you had fun! :3\nPress any key to quit this tool.\nYou will find the file in your folder called\nedited_staff_ghost_time.bin\n";
 	}
 	system("pause");
+	// What does this do? It makes it incompileable?
 	return 0;
 }
