@@ -11,20 +11,11 @@
 
 using namespace std;
 
-string GetFileContents(const char *filename) {
-	ifstream in(filename, ios::in | ios::binary);
-	if (in){
-		ostringstream contents;
-		contents << in.rdbuf();
-		in.close();
-		
-		return (contents.str());
-	}
-	throw(errno);
-}
-
 int main() {
-	string text = GetFileContents("staff_ghost_time.bin");
+	Couting couting;
+	FileIO file;
+	
+	string text = file.GetFileContents("staff_ghost_time.bin");
 	
 	//Separating string to signs to reverse it
 	string array[160];
@@ -54,7 +45,6 @@ int main() {
     	char c;
     	cin >> c;
     	if (c == 'y') {
-			Couting couting;
 		couting.CourseList();
     	}
 	
