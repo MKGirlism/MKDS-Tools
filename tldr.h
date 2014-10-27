@@ -1,5 +1,10 @@
 #ifndef TLDR_H_
 #define TLDR_H_
+#include <sstream>
+#include <string>
+#include <fstream>
+#include <streambuf>
+#include <cerrno>
 #include <iostream>
 
 class Couting {
