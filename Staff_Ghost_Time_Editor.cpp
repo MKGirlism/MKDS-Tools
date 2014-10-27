@@ -50,9 +50,10 @@ int main(){
     cout << "Staff_Ghost_Time.bin editor by Szymbar15, 2014\nCreated for DSHack.org community\nszymbar1513@gmail.com\n*****************\nMake sure you put staff_ghost_time.bin in the same folder as this tool\nDo you want to see some hints on tool usage? \nType \"y\" if you want or anything else if you don\'t: ";
     char c;
     cin >> c;
-    if (c=='y') {
+     if (c=='y') {
+    FILE * fp;	
     fp = fopen ("courses.txt", "r");
-    fprintf(fp);
+    fputs ("Courselist\n",fp);
     fclose(fp);
     }
     int y;
