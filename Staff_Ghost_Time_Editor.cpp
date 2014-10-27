@@ -1,9 +1,8 @@
 // Release 1.0. Probably a lot can be optimised, but sigh, it's my first proper tool ever :3
 // TYCO - Added courses.txt with and opening it instead of putting it in the code, still doesn't compile but my part should work
 // Yami - Removed some unnecessary "STD"'s, as well as made it Compileable on all OS's. Also, I made the Layout more readable. Besides, Tycoonie's TXT File didn't work, so I have separated everything, into a Class.
-#include "tldr.h"
 
-using namespace std;
+#include "tldr.h"
 
 int main() {
 	Couting couting;
