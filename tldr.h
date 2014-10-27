@@ -7,4 +7,9 @@ public:
 	void CourseList();
 };
 
+class FileIO {
+public:
+	string GetFileContents(const char *filename);
+};
+
 #endif
