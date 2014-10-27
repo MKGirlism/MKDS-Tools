@@ -1,0 +1,34 @@
+1: GCN Yoshi Circuit
+2-8 Unused Slots
+9: GCN Baby Park
+10: SNES Mario Circuit 1
+11: N64 Moo Moo Farm
+12: GBA Bowser Castle
+13: GBA Peach Circuit
+14: GCN Luigi Circuit
+15: SNES Koopa Beach 2
+16: N64 Frappe Snowland
+17: Tick-Tock Clock
+18: Luigi's Mansion
+19: Airship Fortress
+20: Figure-8 Circuit
+21: Unused slot
+22: Yoshi Falls
+23: N64 Banshee Boardwalk
+24: Shoom Ridge
+25: Mario Circuit
+26: Peach Gardens
+27: Desert Hills
+28: Delfino Square
+29: Rainbow Road
+30: DK Pass\
+31: Cheep Cheep Beach
+32: Bowser Castle
+33: Waluigi Pinball
+34: Wario Stadium
+35: SNES Donut Plains
+36: N64 Choco Mountain
+37: GBA Luigi Circuit
+38: GCN Mushroom Bridge
+39: SNES Choco Island
+40: GBA Sky Garden
