@@ -4,8 +4,8 @@
 #include <string>
 #include <fstream>
 #include <streambuf>
-#include <cerrno>
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ public:
 
 class FileIO {
 public:
-	string GetFileContents(const char *filename);
+	string GetFileContents(string filename);
 };
 
 #endif
