@@ -37,14 +37,16 @@ void Couting::CourseList() {
 		"40: GBA Sky Garden\n"  << endl;
 }
 
-string FileIO::GetFileContents(const char *filename) {
-	ifstream in(filename, ios::in | ios::binary);
-	if (in){
-		ostringstream contents;
-		contents << in.rdbuf();
-		in.close();
-		
-		return (contents.str());
-	}
-	throw(errno);
+string FileIO::GetFileContents(string filename) {
+		ifstream myfile (filename);
+		if (myfile.is_open())
+  			{
+    			ostringstream contents;
+    			contents << myfile.rdbuf();
+			myfile.close();
+    			return (contents.str());
+  			}  else {
+				cout << "There isn't a valid file called " + filename + " in your directory.\nCheck if it really is there.\n";
+				exit(1);
+			}
 }
