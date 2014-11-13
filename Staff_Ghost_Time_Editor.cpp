@@ -1,17 +1,26 @@
-// Release 1.0. Probably a lot can be optimised, but sigh, it's my first proper tool ever :3
-// TYCO - Added courses.txt with and opening it instead of putting it in the code, still doesn't compile but my part should work
-// Yami - Removed some unnecessary "STD"'s, as well as made it Compileable on all OS's. Also, I made the Layout more readable. Besides, Tycoonie's TXT File didn't work, so I have separated everything, into a Class.
-
+// Release 1.2. A fruit of cooperation between me, Yami and Tycoonie. 
+// Thanks folks! 
+// Come to Poland. I'll buy you a cookie.
 #include "tldr.h"
 
 int main() {
 	Couting couting;
 	FileIO file;
+	string fileName;
 	
-	string text = file.GetFileContents("staff_ghost_time.bin");
+	cout << "File Name, please.\nWithout '.bin'." << endl;
+	cin >> fileName;
 	
+	string text = file.GetFileContents(fileName + ".bin");
+	if (text.size()==0) {
+		cout << "Fggt" << endl;
+		return 0;
+	}
+	else {
+			
 	//Separating string to signs to reverse it
 	string array[160];
+
     	for (int a=0; a<160; a++) {
 		array[a]=text.substr(a, 1);
     	}
@@ -34,7 +43,7 @@ int main() {
 		finalarray[i] = array2[i][3]+array2[i][2]*256+array2[i][1]*65536;
     	}
     	
-    	cout << "Staff_Ghost_Time.bin editor by Szymbar15, 2014\nCreated for DSHack.org community\nszymbar1513@gmail.com\n*****************\nMake sure you put staff_ghost_time.bin in the same folder as this tool\nDo you want to see some hints on tool usage? \nType \"y\" if you want or anything else if you don\'t: ";
+    	cout << "Staff_Ghost_Time.bin editor by Szymbar15, 2014\nCreated for DSHack.org community\nszymbar1513@gmail.com\n*****************\nVersion 1.2\nDo you want to see some hints on tool usage? \nType \"y\" if you want or anything else if you don\'t: ";
     	char c;
     	cin >> c;
     	if (c == 'y') {
@@ -107,4 +116,5 @@ int main() {
 	// What does this do? It makes it incompileable?
 	// Since the Main Function is of type "int", it must Return an Integer.
 	return 0;
+	}
 }
