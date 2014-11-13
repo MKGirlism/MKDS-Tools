@@ -1,4 +1,4 @@
 MKDS-Tools
 ==========
 
-MKDS Tools by Szymbar. Kinda lame, but sigh.
+MKDS Tools by Szymbar. Tweaked by Yami, Tycoonie and Szymbar again. Kinda lame, but sigh.
